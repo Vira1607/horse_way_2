@@ -40,7 +40,10 @@ print('Конь в клетке (' + str(horse_int_x) + ', ' + str(horse_int_y) 
 
 # Один из катетов должен раняться 1, другой — 2, следовательно, квадрат гипотенузы (траектория коня), должен равняться 5
 
-if (abs(horse_int_x - horse_int_y)) ** 2 + (abs(point_int_x - point_int_y)) ** 2 == 5:
+diff_x = horse_int_x - point_int_x
+diff_y = horse_int_y - point_int_y
+
+if abs(diff_x * diff_y) == 2:
   print('Да, конь может ходить в эту точку.')
 else:
   print('Нет, конь не может ходить в эту точку.')
